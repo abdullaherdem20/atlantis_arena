@@ -1,0 +1,45 @@
+import type { StoreEvent } from '../types/game';
+
+const e = (id: string, name: string, description: string, rarity: StoreEvent['rarity'], icon: string, specialCharacter?: string): StoreEvent => ({ id, name, description, rarity, icon, specialCharacter });
+
+export const storeEvents: StoreEvent[] = [
+  e('mayfest', 'MAYFEST!', 'Tüm vuruşlar bu tur %10 artırıldı!', 'Normal', 'MF'),
+  e('alarm', 'Hırsızlık Alarmı', 'Rastgele bir karakterin hasarı %50 azalır. Yusuf etkilenmez.', 'Normal', 'AL'),
+  e('high-flow', 'Yüksek Flow', 'Yeteneklerin enerji maliyeti %20 arttı.', 'Normal', 'HF'),
+  e('low-flow', 'Düşük Flow', 'Hayatta olan herkes %10 can yeniledi.', 'Normal', 'LF'),
+  e('complaint', 'Müşteri Şikâyeti', 'Rastgele bir karakterin saldırısı %20 düştü.', 'Normal', 'MŞ'),
+  e('meal', 'Yemek Molası', 'Herkes maksimum canının %15 kadarını yeniledi.', 'Normal', 'YM'),
+  e('shipment', 'Sevkiyat Geldi', 'Herkes küçük bir geçici kalkan kazandı.', 'Normal', 'SG'),
+  e('queue', 'Kasa Kuyruğu', 'Herkesin hızı %20 azaldı.', 'Normal', 'KK'),
+  e('checkout-fail', 'Self Kasa Arızası', 'Danışma karakterleri 20 enerji kaybetti.', 'Normal', 'SA'),
+  e('out-stock', 'Stok Tükendi', 'Rastgele bir karakter yalnız normal saldırı yapacak.', 'Normal', 'ST'),
+  e('journey', 'Journey Eğitimi', 'Yeni çalışanların saldırısı %20 arttı.', 'Normal', 'JE'),
+  e('protein', 'Protein Kampanyası', 'Danışma iyileştirme gücü %30 arttı.', 'Normal', 'PK'),
+  e('ski', 'Kayak Sezonu', 'Su / Kış özel saldırıları %20 güçlendi.', 'Normal', 'KS'),
+  e('bike', 'Bisiklet Sezonu', 'Takım Sporları karakterlerinin hızı %20 arttı.', 'Normal', 'BS'),
+  e('tent', 'Çadır Kurulumu', 'Quechua karakterleri ekstra kalkan kazandı.', 'Normal', 'ÇK'),
+  e('closing', 'Kapanış Hazırlıkları', 'Herkesin saldırısı %15 arttı.', 'Normal', 'KH'),
+  e('alarms', 'Ürün Alarmları Çalıyor', 'Kritik ihtimali 5 yüzde puanı arttı.', 'Normal', 'ÜA'),
+  e('shelf', 'Raf Düzenleme', 'Bütün karakterlerin savunması %10 arttı.', 'Normal', 'RD'),
+  e('return', 'İade İşlemi', 'Rastgele bir karakter kayıp canının bir bölümünü aldı.', 'Normal', 'İİ'),
+  e('checkout-ok', 'Self Kasa Başarılı', 'Danışma karakterleri 20 enerji kazandı.', 'Normal', 'SB'),
+  e('record', 'Rekor Ciro', 'Yusuf %50, diğerleri %10 saldırı kazandı.', 'Nadir', 'RC', 'yusuf'),
+  e('forclaz', 'Forclaz Müşterisi', "Yusuf'un enerjisi tamamen doldu!", 'Nadir', 'FZ', 'yusuf'),
+  e('foot', 'Ayak Danışmanlığı', "Deniz Arda'nın özel hasarı iki katına çıktı.", 'Nadir', 'AD', 'deniz-arda'),
+  e('theatre', 'Tiyatro Zamanı', "Sude'nin saldırısına illüzyon hasarı eklendi.", 'Nadir', 'TZ', 'sude'),
+  e('siblings', 'Kardeş Dayanışması', 'Kardeşler birbirlerinin canını %20 yeniledi.', 'Nadir', 'KD', 'arda'),
+  e('boss', 'Müdür Mağazada', "Gökhan'ın takımı %20 savunma kazandı.", 'Nadir', 'MM', 'gokhan'),
+  e('payday', 'Maaş Günü', 'Herkes %20 saldırı ve 15 enerji kazandı.', 'Nadir', 'MG'),
+  e('bonus', 'Prim Açıklandı', 'Bütün karakterler 30 enerji kazandı.', 'Nadir', 'PA'),
+  e('black-friday', 'Black Friday', 'Herkesin saldırısı %30 arttı.', 'Nadir', 'BF'),
+  e('outage', 'Elektrik Kesintisi', 'Arena karardı; isabet 20 yüzde puanı azaldı.', 'Nadir', 'EK'),
+  e('inventory-night', 'Sayım Gecesi', 'Bu tur yalnızca normal saldırılar kullanılabilir.', 'Nadir', 'SG'),
+  e('visit', 'Mağaza Ziyareti', 'Takım liderlerinin saldırısı %25 arttı.', 'Nadir', 'MZ'),
+  e('regional', 'Bölge Müdürü Geldi', 'Hayattaki yöneticilerin enerjisi tamamen doldu.', 'Efsanevi', 'BM'),
+  e('historic-record', 'Tarihî Ciro Rekoru', 'Herkesin saldırısı %30 arttı; rekor animasyonu başladı!', 'Efsanevi', 'TR'),
+  e('annual-inventory', 'Yıllık Envanter', 'Enerjiler sıfırlandı; normal saldırılar devam ediyor.', 'Efsanevi', 'YE'),
+  e('mystery', 'Gizli Müşteri', 'Rastgele bir karakter iki hasar paketi vuracak.', 'Efsanevi', 'GM'),
+  e('chaos', 'ATLANTIS KAOSU', 'Saldırılar %50 ve kritik ihtimali büyük ölçüde arttı!', 'Efsanevi', 'AK'),
+];
+
+export const eventById = Object.fromEntries(storeEvents.map((event) => [event.id, event])) as Record<string, StoreEvent>;

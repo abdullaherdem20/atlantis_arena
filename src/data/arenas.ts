@@ -1,0 +1,31 @@
+import type { Arena } from '../types/game';
+
+export const arenas: Arena[] = [
+  { id: 'hali-saha', name: 'Halı Saha', department: 'Takım Sporları', bonusType: 'attack', bonus: .15, bonusLabel: '+%15 saldırı', description: 'Gece projektörleri altında yeşil saha, kale ve dolu tribünler.', palette: ['#062d22', '#19a15f', '#d5ffef'] },
+  { id: 'basketbol', name: 'Basketbol Salonu', department: 'Takım Sporları', bonusType: 'crit', bonus: .15, bonusLabel: '+%15 kritik hasar', description: 'Parke, potalar ve canlı skor ekranı.', palette: ['#401b13', '#d26b2b', '#ffcf70'] },
+  { id: 'voleybol', name: 'Voleybol Sahası', department: 'Takım Sporları', bonusType: 'combo', bonus: .15, bonusLabel: '+%15 kombo hasarı', description: 'File, salon ışıkları ve tezahürat yapan tribünler.', palette: ['#17234f', '#ef893c', '#f8e6a0'] },
+  { id: 'scooter', name: 'Scooter Parkı', department: 'Takım Sporları', bonusType: 'speed', bonus: .15, bonusLabel: '+%15 hız', description: 'Neon rampalar ve gece şehir manzarası.', palette: ['#171b36', '#5264c7', '#75f2ec'] },
+  { id: 'paten', name: 'Paten Parkı', department: 'Takım Sporları', bonusType: 'dodge', bonus: .10, bonusLabel: '+10 yüzde puanı kaçınma', description: 'Grafitili rampalar ve kayan ışıklar.', palette: ['#371650', '#ef45a7', '#44d7ff'] },
+  { id: 'bisiklet', name: 'Bisiklet Pisti', department: 'Takım Sporları', bonusType: 'speed', bonus: .20, bonusLabel: '+%20 hız', description: 'Toprak virajlar, çam ormanı ve yarış bayrakları.', palette: ['#17351f', '#96623d', '#b7d45c'] },
+  { id: 'atletizm', name: 'Atletizm Pisti', department: 'Takım Sporları', bonusType: 'speed', bonus: .15, bonusLabel: '+%15 hız, +%5 saldırı', description: 'Kırmızı koşu pisti ve büyük stadyum.', palette: ['#2b1c34', '#c63d4f', '#ffd487'] },
+  { id: 'avcilik', name: 'Avcılık Ormanı', department: 'Takım Sporları', bonusType: 'accuracy', bonus: .10, bonusLabel: '+10 yüzde puanı isabet', description: 'Fantastik hedef tahtalarıyla yoğun orman.', palette: ['#071f19', '#1c6948', '#d8be61'] },
+  { id: 'tenis', name: 'Tenis Kortu', department: 'Takım Sporları', bonusType: 'crit', bonus: .15, bonusLabel: '+%15 kritik hasar', description: 'Mavi kort, file ve sekip duran toplar.', palette: ['#12286c', '#2e7bea', '#d8f368'] },
+  { id: 'kamp', name: 'Quechua Kamp Alanı', department: 'Quechua', bonusType: 'heal', bonus: .05, bonusLabel: 'Her tur %5 can yenileme', description: 'Çadırlar, kamp ateşi ve yıldızlı gökyüzü.', palette: ['#091c31', '#255640', '#ffaf44'] },
+  { id: 'dag', name: 'Dağ Zirvesi', department: 'Quechua', bonusType: 'defense', bonus: .20, bonusLabel: '+%20 savunma', description: 'Kayalık zirve ve bulut denizi.', palette: ['#1f2940', '#74849a', '#cce8ff'] },
+  { id: 'trekking', name: 'Trekking Parkuru', department: 'Quechua', bonusType: 'shield', bonus: .15, bonusLabel: '+%15 kalkan gücü', description: 'Orman yolu, çantalar ve yön tabelaları.', palette: ['#153524', '#637835', '#d2a35b'] },
+  { id: 'havuz', name: 'Olimpik Yüzme Havuzu', department: 'Su / Kış', bonusType: 'special', bonus: .15, bonusLabel: '+%15 özel saldırı', description: 'Işıltılı kulvarlar ve hareketli su.', palette: ['#0b2750', '#0f92c9', '#8eeaff'] },
+  { id: 'kayak', name: 'Kayak Pisti', department: 'Su / Kış', bonusType: 'special', bonus: .20, bonusLabel: '+%20 buz ve özel saldırı', description: 'Karlı dağlar, telesiyej ve yoğun kar.', palette: ['#26385f', '#6f91c5', '#eef8ff'] },
+  { id: 'gemi', name: 'Balıkçı Gemisi', department: 'Su / Kış', bonusType: 'accuracy', bonus: .10, bonusLabel: '+10 yüzde puanı isabet', description: 'Dalgalar üzerinde sallanan açık deniz gemisi.', palette: ['#081f43', '#166f9f', '#f2c46f'] },
+  { id: 'surf', name: 'Sörf Sahili', department: 'Su / Kış', bonusType: 'speed', bonus: .15, bonusLabel: '+%15 hız', description: 'Palmiye, sörf tahtaları ve turkuaz dalgalar.', palette: ['#065567', '#11a9bf', '#ffd479'] },
+  { id: 'fitness', name: 'Fitness Salonu', department: 'Su / Kış', bonusType: 'attack', bonus: .20, bonusLabel: '+%20 fiziksel saldırı', description: 'Dambıllar ve ışıklı spor makineleri.', palette: ['#171d2c', '#3d4a68', '#ed455b'] },
+  { id: 'boks', name: 'Boks Ringi', department: 'Su / Kış', bonusType: 'attack', bonus: .15, bonusLabel: '+%15 saldırı, +%10 kritik', description: 'Spot ışıkları altında ring ve seyirciler.', palette: ['#210e23', '#c32f45', '#ffd36b'] },
+  { id: 'self-kasa', name: 'Self Kasa Bölgesi', department: 'Danışma', bonusType: 'special', bonus: .20, bonusLabel: '+%20 enerji yenileme', description: 'Yanıp sönen self kasalar ve barkod ışıkları.', palette: ['#111a45', '#3643ba', '#6fd6ff'] },
+  { id: 'danisma', name: 'Danışma Bankosu', department: 'Danışma', bonusType: 'heal', bonus: .20, bonusLabel: '+%20 iyileştirme', description: 'Bilgisayarlar, danışma masası ve müşteri sırası.', palette: ['#151d51', '#4154c7', '#f2f5ff'] },
+  { id: 'protein', name: 'Sporcu Besinleri Reyonu', department: 'Danışma', bonusType: 'hp', bonus: .15, bonusLabel: '+%15 maksimum can', description: 'Protein kutuları, barlar ve enerji ürünleri.', palette: ['#34143f', '#9e3f93', '#f4c456'] },
+  { id: 'atlantis-magaza', name: 'Atlantis Mağazası', department: 'Tarafsız', bonusType: 'none', bonus: 0, bonusLabel: 'Tarafsız arena', description: 'Mavi tabelalı büyük spor mağazasının kalbi.', special: true, unlockWins: 0, palette: ['#101840', '#3643ba', '#ffffff'] },
+  { id: 'otopark', name: 'Atlantis AVM Otoparkı', department: 'Tarafsız', bonusType: 'none', bonus: 0, bonusLabel: 'Tarafsız arena', description: 'Araçlar ve AVM ışıklarıyla gece otoparkı.', special: true, unlockWins: 1, palette: ['#141a2e', '#434d67', '#f2c14e'] },
+  { id: 'mola', name: 'Mola Odası', department: 'Tarafsız', bonusType: 'none', bonus: 0, bonusLabel: 'Tarafsız arena', description: 'Yemek masaları, dolaplar ve çalışan otomat.', special: true, unlockWins: 2, palette: ['#342743', '#5c758d', '#f7cf72'] },
+  { id: 'depo', name: 'Gece Deposu', department: 'Tarafsız', bonusType: 'none', bonus: 0, bonusLabel: 'Tarafsız arena', description: 'Kutular, raflar ve loş acil durum ışıkları.', special: true, unlockWins: 3, palette: ['#121a25', '#263c50', '#d95858'] },
+];
+
+export const arenaById = Object.fromEntries(arenas.map((arena) => [arena.id, arena])) as Record<string, Arena>;
